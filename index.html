@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Springfield Adventure</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Game framework -->
+  <script defer src="scriptObjects.js"></script>
+  <script defer src="constructor.js"></script>
+  <script defer src="repeat.js"></script>
+  <script defer src="library.js"></script>
+
+  <!-- Levels -->
+  <script defer src="levels/level1.js"></script>
+  <script defer src="levels/level2.js"></script>
+  <script defer src="levels/level3.js"></script>
+
+  <!-- Game logic (drawing to screen) (don't actually draw on the screen- that'd be bad) -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div id="assets">
+    <img src="assets/dev/gametest.jpg" id="test">
+    <img src="assets/misc/flashlight.png" id="flashlight">
+    
+    <img src="assets/characters/animation/down/frame000.png" id="pDown000">
+    <img src="assets/characters/animation/down/frame001.png" id="pDown001">
+    <img src="assets/characters/animation/down/frame002.png" id="pDown002">
+
+    <img src="assets/characters/animation/right/frame000.png" id="pRight000">
+    <img src="assets/characters/animation/right/frame001.png" id="pRight001">
+
+    <img src="assets/characters/animation/left/frame000.png" id="pLeft000">
+    <img src="assets/characters/animation/left/frame001.png" id="pLeft001">
+
+    <!-- l1 -->
+    <img src="assets/levels/level1/key.png" id="key">
+    <img src="assets/levels/level1/door.png" id="door">
+    <img src="assets/levels/level1/wall_circle.png" id="wallTop1">
+    <img src="assets/levels/level1/wall_square.png" id="wallTop2">
+    <img src="assets/levels/level1/wall_star.png" id="wallTop3">
+    <img src="assets/levels/level1/wall_top.png" id="wallTop4">
+    <img src="assets/levels/level1/wall_top2.png" id="wallTop5">
+    <img src="assets/levels/level1/wall_top6.png" id="wallTop6">
+    <img src="assets/levels/level1/wall_filler.png" id="wallFiller">
+    <img src="assets/levels/level1/toy_shelf1.png" id="toyShelf1">
+    <img src="assets/levels/level1/toy_shelf_top.png" id="toyShelfTop">
+    <img src="assets/levels/level1/floor_tile.png" id="floorTileLevel1">
+
+    <!-- l2 -->
+    <img src="assets/levels/level2/wall_up.png" id="iceSkateWallUp">
+    <img src="assets/levels/level2/wall_side.png" id="iceSkateWallSide">
+    <img src="assets/levels/level2/backdrop.png" id="iceSkateBackdrop">
+    <img src="assets/levels/level2/fishing_hole.png" id="fishingHole">
+    <img src="assets/levels/level2/peng_front.png" id="pengFront">
+    <img src="assets/levels/level2/peng_back.png" id="pengBack">
+    <img src="assets/levels/level2/projectile.png" id="pengProjectile">
+    <img src="assets/levels/level2/fish1.png" id="fish1">
+    <img src="assets/levels/level2/fish2.png" id="fish2">
+    <img src="assets/levels/level2/fish3.png" id="fish3">
+    <img src="assets/levels/level2/fish4.png" id="fish4">
+
+    <!-- l3 -->
+    <img src="assets/levels/level3/laundromat_wall_front.png" id="laundromatWallFront">
+    <img src="assets/levels/level3/laundromat_wall_side.png" id="laundromatWallSide">
+    <img src="assets/levels/level3/backdrop.png" id="laundromatBackdrop">
+    <img src="assets/levels/level3/shirt1.png" id="shirt1">
+    <img src="assets/levels/level3/shirt2.png" id="shirt2">
+    <img src="assets/levels/level3/shirt3.png" id="shirt3">
+    <img src="assets/levels/level3/shirt4.png" id="shirt4">
+    <img src="assets/levels/level3/shirt_generic.png" id="shirtGeneric">
+  </div>
+  <div id="container">
+    <div id="startMenu" class="start-menu">
+      <div class="title">
+        <h1>Springfield Adventure</h1>
+      </div>
+      <p id="loadingDisplay">Loading...</p>
+      <button id="startBtn" class="btn start-btn">Start game</button>
+    </div>
+    <div id="preloadMenu" class="preload-menu">
+      <p id="typewriter" class="typewriter"></p>
+      <button id="continueBtn" class="btn continue-btn">Continue</button>
+    </div>
+    <div class="overlay pause-menu" id="pause-menu">
+      <h1>Game paused</h1>
+      <button id="resume-btn" class="btn" onclick="togglePause()">Resume game (ESC)</button>
+    </div>
+    <div class="overlay restart-menu" id="restartMenu">
+      <h1>Minigame Failed!</h1>
+      <p>Good luck next time...</p>
+      <button class="btn" id="restartBtn">Restart level</button>
+    </div>
+    <div class="overlay success-menu" id="successMenu">
+      <h1>Minigame Completed!</h1>
+      <p id="levelDescription">Good job!</p>
+      <button class="btn" id="nextBtn">Next game</button>
+    </div>
+    <canvas id="gameSpace" height="1080" width="1920"></canvas>
+  </div>
+
+  <div id="devMenu" class="dev-menu">
+    <p>DEVELOPER</p>
+    <button id="l1Btn">Level 1</button>
+    <button id="l2Btn">Level 2</button>
+    <button id="l3Btn">Level 3</button>
+  </div>
+
+
+</body>
+
+</html>
