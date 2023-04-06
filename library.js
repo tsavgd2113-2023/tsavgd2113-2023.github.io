@@ -316,11 +316,11 @@ function playerWallCollision() {
           player.speedY -= 25 * dt;
           antiPlayer.speedY += 25 * dt;
         }
-        //pUpAnimSkate.start();
+        pUpAnimSkate.start();
       } else {
         player.speedY = -400 * dt;
         antiPlayer.speedY = 400 * dt;
-        //pUpAnim.start();
+        pUpAnim.start();
       }
 
       playerIsMoving = true;

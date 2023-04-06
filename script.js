@@ -24,15 +24,15 @@ function setup() {
   peng = new Component(60, 60, "rgba(255,255,255,0)", (canvas.width / 2) - 30, (canvas.height / 2) - 30);
   antiPlayer = new Component(60, 60, invisible, canvas.width / 2, canvas.height / 2);
 
-  //pUpAnim = new AnimationController(player, ["pUp000", "pUp001", "pUp002"], 0.15);
+  pUpAnim = new AnimationController(player, ["pUp000", "pUp001", "pUp002"], 0.15);
   pDownAnim = new AnimationController(player, ["pDown000", "pDown001", "pDown002"], 0.15);
-  pRightAnim = new AnimationController(player, ["pRight000", "pRight001"], 0.15);
   pLeftAnim = new AnimationController(player, ["pLeft000", "pLeft001"], 0.15);
+  pRightAnim = new AnimationController(player, ["pRight000", "pRight001"], 0.15);
 
-  //pUpAnimSkate = new AnimationController(player, ["pUp000", "pUp002"], 0.5);
+  pUpAnimSkate = new AnimationController(player, ["pUp000", "pUp002"], 0.5);
   pDownAnimSkate = new AnimationController(player, ["pDown000", "pDown002"], 0.5);
-  pRightAnimSkate = new AnimationController(player, ["pRight000", "pRight001"], 0.5);
   pLeftAnimSkate = new AnimationController(player, ["pLeft000", "pLeft001"], 0.5);
+  pRightAnimSkate = new AnimationController(player, ["pRight000", "pRight001"], 0.5);
 
   lastUpdate = performance.now();
   frameRate(); /* Recursive function, will call itself every frame.
