@@ -15,7 +15,7 @@ var levelMsg = document.getElementById("levelDescription");
 var nextBtn = document.getElementById("nextBtn");
 
 // Level 1
-var level1Timer = 100;
+var level1Timer = 60;
 var level1Key = [];
 var level1Door = [];
 

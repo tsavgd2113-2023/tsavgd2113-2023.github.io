@@ -542,7 +542,7 @@ function switchLevel(level) {
   level1Key = [];
   level1Door = [];
 
-  level1Timer = 100;
+  level1Timer = 60;
   level2Lives = 3;
 
   washingMachine = [];
